@@ -1,0 +1,27 @@
+.header-user-actions {
+  display: flex;
+  align-items: center;
+  .user-actions-item {
+    margin-right: 32px;
+    color: black;
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+}
+.user-actions__img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 100%;
+}
+
+.user-actions-item {
+  :hover {
+    transition: .2s linear;
+    color: orange ;
+  }
+}

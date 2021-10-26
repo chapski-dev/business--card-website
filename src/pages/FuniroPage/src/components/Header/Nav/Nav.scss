@@ -1,0 +1,18 @@
+@import '../../../assets/scss/global.scss';
+
+.header__menu {
+  flex: 0 1 420px;
+}
+.nav {
+  display: block;
+}
+.nav-items-list {
+  display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: space-evenly;
+    -ms-flex-pack: space-evenly;
+    justify-content: space-evenly;
+}

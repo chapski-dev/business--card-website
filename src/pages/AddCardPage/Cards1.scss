@@ -1,0 +1,167 @@
+.add-card-page {
+  background-color: black;
+  body {
+    font-family: 'Montserrat', 'Helvetica', sans-serif;
+    font-size: 14px;
+    line-height: 1.3;
+    background-color: #808080;
+    background-image: linear-gradient(to right, #202020, #808080);
+  }
+  .container,
+  .card-container {
+    margin: 0 auto;
+    margin-top: 5em;
+    width: 400px;
+    text-align: right;
+  }
+  .card {
+    width: 400px;
+    height: 250px;
+    text-align: left;
+    margin-bottom: 1em;
+  }
+  .flip {
+    width: inherit;
+    height: inherit;
+  }
+  .front {
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    border-radius: 15px;
+    color: #fff;
+    text-shadow: 0 1px 1px rgba(0,0,0,0.3);
+    box-shadow: 0 1px 10px 1px rgba(0,0,0,0.3);
+    backface-visibility: hidden;
+    background-image: linear-gradient(to right, #111, #555);
+    overflow: hidden;
+    transform: translateZ(0);
+  }
+  .strip-bottom,
+  .strip-top {
+    position: absolute;
+    right: 0;
+    height: inherit;
+    background-image: linear-gradient(to bottom, #ff6767, #ff4545);
+    box-shadow: 0 0 10px 0px rgba(0,0,0,0.5);
+  }
+  .strip-bottom {
+    width: 200px;
+    transform: skewX(-15deg) translateX(50px);
+  }
+  .strip-top {
+    width: 180px;
+    transform: skewX(20deg) translateX(50px);
+  }
+  .logo {
+    position: absolute;
+    top: 30px;
+    right: 25px;
+  }
+  .investor {
+    position: relative;
+    top: 30px;
+    left: 25px;
+    text-transform: uppercase;
+  }
+  .chip {
+    position: relative;
+    top: 60px;
+    left: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 40px;
+    border-radius: 5px;
+    background-image: linear-gradient(to bottom left, #ffecc7, #d0b978);
+    overflow: hidden;
+    .chip-line {
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      background-color: #333;
+      &:nth-child(1) {
+        top: 13px;
+      }
+      &:nth-child(2) {
+        top: 20px;
+      }
+      &:nth-child(3) {
+        top: 28px;
+      }
+      &:nth-child(4) {
+        left: 25px;
+        width: 1px;
+        height: 50px;
+      }
+    }
+    .chip-main {
+      width: 20px;
+      height: 25px;
+      border: 1px solid #333;
+      border-radius: 3px;
+      background-image: linear-gradient(to bottom left, #efdbab, #e1cb94);
+      z-index: 1;
+    }
+  }
+  .wave {
+    position: relative;
+    top: 20px;
+    left: 100px;
+  }
+  .card-number {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 50px 25px 15px;
+    font-size: 23px;
+    font-family: 'cc font', monospace;
+  }
+  .end {
+    margin-left: 25px;
+    text-transform: uppercase;
+    font-family: 'cc font', monospace;
+    .end-text {
+      font-size: 9px;
+      color: rgba(255,255,255,0.8);
+    }
+  }
+  .card-holder {
+    margin: 10px 25px;
+    text-transform: uppercase;
+    font-family: 'cc font', monospace;
+  }
+  .master {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    display: flex;
+    .circle {
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+    }
+    .master-red {
+      background-color: #eb001b;
+    }
+    .master-yellow {
+      margin-left: -10px;
+      background-color: rgba(255,209,0,0.6);
+    }
+  }
+  button {
+    background: none;
+    color: #fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+  }
+  @font-face {
+    font-family: 'cc font';
+    src: url("data:application/font-woff2");
+    font-weight: normal;
+    font-style: normal;
+  }
+}

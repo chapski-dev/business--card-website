@@ -1,0 +1,110 @@
+.nav-item {
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin: 0 3px;
+  padding: 5px 0;
+  position: relative;
+  &:hover {
+    cursor: pointer;
+    .menu__arrow {
+      transform: rotate(180deg);
+      .anticon {
+        color: orange;
+      }
+    }
+    .nav-item-dropdown {
+      transform: translateY(0px);
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+    }
+    .nav-item-link {
+      color: orange;
+    }
+  }
+}
+.nav-item-link {
+  position: relative;
+  transition: .2s linear;
+  color: black;
+  &:hover {
+    .nav-item-dropdown {
+      display: block;
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+    }
+  }
+}
+
+.nav-item-dropdown {
+  display: block;
+  position: absolute;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  opacity: 0;
+  visibility: hidden;
+  min-width: 200px;
+  left: 0;
+  pointer-events: none;
+  top: 100%;
+  -webkit-transform: translateY(10px);
+      -ms-transform: translateY(10px);
+          transform: translateY(10px);
+  -webkit-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+  z-index: 5;
+  background: #E89F71;
+  padding: 15px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 100%;
+          flex: 1 1 100%;
+  border-radius: 5px;
+}
+
+.nav-item-dropdown-link {
+  color: #fff;
+  line-height: 1.2;
+  position: relative;
+  font-size: 18px;
+  font-weight: 500;
+  &:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: currentColor;
+    pointer-events: none;
+    opacity: 0;
+    -webkit-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+  }
+  &:hover {
+    color: #fff;
+    &:before {
+      opacity: 1;
+      width: 100%;
+    }
+  }
+}
+
+.menu__arrow {
+  border: none;
+  background-color: transparent;
+  font-weight: 500;
+  color: inherit;
+  transition: all .3s ease-in-out;
+  transform: rotate(0deg);
+
+}

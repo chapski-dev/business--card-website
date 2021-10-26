@@ -1,0 +1,27 @@
+.funiro-page {
+
+  .section5-item {
+    flex:  0 0 391px;
+    margin-right: 32px;
+    transition: all .3s ease-in-out;
+  
+    &:nth-of-type(3n) {
+      margin-right: 0;
+    }
+    &:hover {
+      box-shadow: 0 0 32px rgba(97, 97, 97, 0.2);
+    }
+  }
+  .section5-item__img-wrapper {
+    margin-bottom: 16px;
+  }
+  .section5-item__discr {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 120%;
+    margin-bottom: 8px;
+  }
+  .section5-item__info-wrapper {
+    padding: 15px;
+  }
+}

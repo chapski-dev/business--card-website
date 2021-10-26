@@ -1,0 +1,26 @@
+.fill-btn {
+  background-color: #E89F71;
+  color: white;
+  border: none;
+  transition: .2s linear;
+  &:hover {
+    background-color: #d68a5b;
+  }
+  &:active {
+    background-color: #bf7d55;
+  }
+}
+.empty-btn {
+  border: 2px #E89F71 solid;
+  color: #E89F71;
+  background-color: white;
+  transition: .2s linear;
+  &:hover {
+    background-color: #d68a5b;
+    color: white;
+  }
+  &:active {
+    background-color: #bf7d55;
+    color: white;
+  }
+}

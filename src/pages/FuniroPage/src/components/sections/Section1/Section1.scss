@@ -1,0 +1,63 @@
+.funiro-page {
+  .section1 {
+    position: relative;
+    padding-top: 56px;
+    width: 100%;
+    height: 666px;
+    background: url(../../../assets/img/section1/main.png) no-repeat;
+    background-position: right bottom;
+    background-color: #F9F1E7;
+    margin-bottom: 88px;
+  }
+  .section1-item-main {
+    position: absolute;
+    top: -20px;
+    left: 0%;
+    width: 494px;
+    height: 553px;
+    background: rgba(255, 255, 255, 0.72);
+    backdrop-filter: blur(8px);
+    padding: 60px;
+  }
+  .section1-item-main__title {
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 1.2;
+    text-align: left;
+  }
+  .section1-item-main__discr {
+    font-size: 20px;
+    line-height: 150%;
+    margin-bottom: 48px;  
+  }
+  .section1-item-main__btn {
+    width: 374px;
+    height: 78px;
+    font-size: 20px;
+    line-height: 150%;
+  }
+  
+  .section1-item-second {
+    position: absolute;
+    right: -8%;
+    top: 443px;
+    padding: 24px 105px 24px 24px;
+    width: 294px;
+    height: 148px;
+    background: rgba(255, 255, 255, 0.72);
+    backdrop-filter: blur(10px);
+  }
+  .section1-item-second__title {
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 120%;
+    margin-bottom: 4px;
+  }
+  .section1-item-second__discr {
+    color: #616161;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    margin-bottom: 8px;
+  }
+}

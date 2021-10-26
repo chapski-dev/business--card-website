@@ -1,0 +1,13 @@
+.header-search-input {
+  width: 473px;
+  height: 45px;
+  padding-left: 44px;
+  border: none;
+  font-size: 14px;
+  line-height: 150%;
+  margin-right: 121px;
+  &:focus {
+    border: none;
+    outline: none;
+  }
+}

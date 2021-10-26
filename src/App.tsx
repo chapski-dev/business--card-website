@@ -1,25 +1,41 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Redirect, Route, Switch, BrowserRouter as Router} from 'react-router-dom';
+import './App.scss';
+import FuniroPage from './pages/FuniroPage/src/index';
+import HomePage from './pages/HomePage/index';
+import FigmaLandPage from './pages/FigmaLandPage/index';
+import ItStudioPage from './pages/ItStudioPage/src/index';
+import ErrorPage from './pages/ErrorPage/index';
+import AddCardPage from './pages/AddCardPage/index';
+import { Provider } from 'react-redux';
+// import { store } from './redux/index';
+
+
+const Routes = () => {
+  return (
+    <Switch>
+      <Redirect exact path='/' to='home' />
+      <Route exact path='/home' component={HomePage} />
+      <Route exact path='/funiro' component={FuniroPage} />
+      <Route exact path='/figma-land' component={FigmaLandPage} />
+      <Route exact path='/it-studio-page' component={ItStudioPage} />
+      <Route exact path='/card' component={AddCardPage} />
+
+      {/* <Route exact path='/users' component={FuniroPage} /> */}
+      <Route component={ErrorPage} />
+    </Switch>
+  )
+};
 
 function App() {
   return (
+    // <Provider store={store}>
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+        <Routes />
+      </Router>
     </div>
+    // </Provider>
   );
 }
 

@@ -1,0 +1,16 @@
+.ant-menu-overflow {
+  justify-content: flex-end;
+}
+// .ant-layout-header {
+  // width: 100%;
+  // position: fixed;
+  // top: 0;
+  // left: 0%;
+  // z-index: 10;
+// }
+.ant-layout-header, .ant-menu {
+  background-color: #1F2326;
+}
+.ant-layout-content {
+  padding: 0 !important;
+}

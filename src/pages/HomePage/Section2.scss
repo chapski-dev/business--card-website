@@ -1,0 +1,40 @@
+.home-page {
+  .section2 {
+    margin-bottom: 80px;
+  }
+  .section2-items-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .section2-item {
+    width: 31%;
+    padding: 16px 50px 16px 38px;
+    border: black 2px solid;
+  }
+  .section2-item-info {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    justify-content: space-between; 
+  }
+  .section2-item-info__title {
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 52px;
+    color: #C4C4C4;
+    margin-bottom: 12px;
+  }
+  .section2-item-info__suptitle {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 31px;
+    margin-bottom: 12px;
+  }
+  .section2-item-info__text {
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.1em;
+    color: #1F2326;
+  }
+}
