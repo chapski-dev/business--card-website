@@ -3,6 +3,10 @@ import './essects/css/style.scss'
 
 
 const ItStudioPage = () => {
+  window.scrollTo({
+    top:0,
+    behavior: 'smooth',
+  });
   return (
     <PageWrapper>
       <div className="it-studio-page">

@@ -9,6 +9,10 @@ import PageWrapper from '../../components/PageWrapper'
 
 
 const FigmaLandPage = () => {
+  window.scrollTo({
+    top:0,
+    behavior: 'smooth',
+  });
   return (
     <PageWrapper>
       <div className="figma-land-page">

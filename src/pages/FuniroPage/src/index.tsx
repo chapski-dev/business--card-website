@@ -1,4 +1,3 @@
-import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.scss';
 import Header from './components/Header/Header';
@@ -12,6 +11,10 @@ import PageWrapper from '../../../components/PageWrapper';
 
 
 const FuniroPage = () => {
+  window.scrollTo({
+    top:0,
+    behavior: 'smooth',
+  });
   return (
     <PageWrapper>
       <div className="funiro-page">

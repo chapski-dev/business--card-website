@@ -34,62 +34,152 @@
     display: flex;
     justify-content: space-between;
   }
-  .section3-item-card {
-    cursor: pointer;
+
+
+
+
+  .section3-item {
+    background-color: transparent;
     height: 300px;
     width: 30%;
+    perspective: 1000px;
+    &:hover .section3-item-card {
+      transform: rotateY(-180deg);
+    } 
+  }
+
+  .section3-item-card {
+    cursor: pointer;
     position: relative;
-    &:hover {
-      .front {
-        transform: perspective(600px) rotateY(-180deg);
-      }
-      .back {
-        transform: perspective(600px) rotateY(0deg);
-      }
-    }
-  }
-  .center {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-  .front, .back {
-    border-radius: 20px;
     width: 100%;
     height: 100%;
-    backface-visibility: hidden;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+
+  .front, .back {
     position: absolute;
-    transition: transform .45s linear;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+    border-radius: 20px;
   }
   .front img{
     height: 100%;
     border-radius: 30px;
   }
-  .front {
-    transform: perspective(600px) rotateY(0deg);
-    .front-info {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      position: absolute;
-      bottom: -15px;
-      right: 15px;
-      width: 200px;
-      height: 70px;
-      background-color: #3a3a3a;
-      color: white;
-      font-size: 30px;
-      z-index: 2;
-    }
+  .front-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: -15px;
+    right: 15px;
+    width: 200px;
+    height: 70px;
+    background-color: #313131;
+    color: white;
+    font-size: 30px;
+    z-index: 2;
   }
   .back {
-    background-color: black;
-    transform: perspective(600px) rotateY(180deg);
+    background-color: #31313150;
+    transform: rotateY(-180deg);
   }
   .back-content {
-    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
     color: #000;
+    width: inherit;
+    &.center {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+  .back-content__discr {
+    margin-bottom: 15px;
+  }
+  .back-content__btn {
+    border: none;
+    width: 150px;
+    height: 50px;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: whitesmoke;
+    transition: .2s linear;
+  }
+  .section3-item-card__funiro {
+    .back {
+      background-color: #F9F1E7;
+    }
+    .back-content__btn {
+      background-color: #E89F71;
+      border: none;
+      transition: .2s linear;
+      color: white;
+      &:hover {
+        background-color: #d68a5b;
+      }
+      &:active {
+        background-color: #ec9e6e;
+      }
+    }
+  }
+  .section3-item-card__figma-land {
+    .back {
+      background: linear-gradient(45deg, #37BDA6, #CB1AE8);
+    }
+    .back-content {
+      color: white;
+    }
+    .back-content__title {
+      color: white;
+    }
+    .back-content__btn {
+      border: 1px solid white;
+      border-radius: 50px;
+      background: transparent;
+      color: white;
+      &:hover {
+        background-color: white;
+        span {
+        background: linear-gradient(45deg, #37BDA6, #CB1AE8);
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        }
+      }
+    }
+  }
+  .section3-item-card__it-studio {
+    .back {
+      background: linear-gradient(#504DC2, #5F12D0);
+    }
+    .back-content {
+      color: white;
+    }
+    .back-content__title {
+      color: white;
+    }
+    .back-content__btn {
+      color: #fff;
+      background-color: #4985FF;
+      border-radius: 30px;
+      &:hover {
+        background-color: #fff;
+        span {
+          background: linear-gradient(#504DC2, #5F12D0);
+          background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+      }
+    }
   }
 }

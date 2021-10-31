@@ -9,7 +9,7 @@ const Section2 = () => {
           <div className="section2-item">
             <div className="section2-item-info">
               <h3 className="section2-item-info__title">Basic</h3>
-              <span className='section2-item-info__suptitle'>Вёрстка</span>
+              <span className='section2-item-info__suptitle'>Layout</span>
               <span className="section2-item-info__text">Адаптивность и кроссбраузерность. По готовым или индивидуальным решениям.</span>
             </div>
           </div>
