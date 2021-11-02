@@ -11,12 +11,12 @@ const UserActions = () => {
   return (
     <div className="header-user-actions">
       <a href='#' className="user-actions-item user-actions__like">
+        <span className="user-actions__like-count">{customerWishList.length}</span>
         <HeartOutlined />
-        {customerWishList.length}
       </a>
-      <a href='#' className="user-actions-item user-actions__baskt">
+      <a href='#' className="user-actions-item user-actions__cart">
+      <span className="user-actions__products-count">{customerCart.length}</span>
         <ShoppingCartOutlined />
-        {customerCart.length}
       </a>
       <a href="#" className="user-actions-item user-actions__img">
         <UserOutlined />

@@ -26,3 +26,20 @@
     color: orange ;
   }
 }
+.user-actions__like, .user-actions__cart {
+  position: relative;
+}
+.user-actions__like-count, .user-actions__products-count {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  font-size: 12px;
+  width: 15px;
+  height: 15px;
+}
