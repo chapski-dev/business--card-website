@@ -7,22 +7,18 @@ import {
 
 interface ICustomer {
   wishList: number[];
-  cart: object;
-  products: object;
+  cart: number[]
 }
-interface ICartType {
-  
-}
-interface IWishList {
-  
-}
+// interface ICartType {
+// }
+// interface IWishList {
+// }
+// interface IProducts {
+// }
 
 const defaultState: ICustomer = {
   wishList: [],
-  products: [],
-  cart: {
-    products: []
-  }
+  cart: [],
 }
 
 const customer = (state = defaultState, action: { type: string; payload: any; }) => {
@@ -38,25 +34,21 @@ const customer = (state = defaultState, action: { type: string; payload: any; })
           ? acc
           : [...acc, el];
       }, [])
-
       return {
         ...state, 
         wishList: newWishList
       }
-      case ADD_TO_CART:
-        return {
-          ...state,
-          cart: {
-            ...state.cart,
-            // products: [...state.cart.products, action.payload]
-          }
-        };
-  
-      case REMOVE_FROM_CART:
-        return {
-          ...state, 
-          products: action.payload
-        }
+    case ADD_TO_CART:
+      return {
+        ...state,
+        cart: [...state.cart, action.payload]
+      };
+
+    case REMOVE_FROM_CART:
+      return {
+        ...state, 
+        cart: action.payload
+      }
     default: 
       return state
   }

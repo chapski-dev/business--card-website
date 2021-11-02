@@ -2,7 +2,7 @@ import React from 'react';
 import { useEffect, useState } from "react";
 import "./Section3.scss";
 import { Section3Item } from './Section3Item';
-import { selectWishList } from '../../../../../../store/Customer';
+import { selectCart, selectWishList } from '../../../../../../store/Customer';
 import { useSelector } from 'react-redux';
 
 
@@ -11,6 +11,7 @@ import { useSelector } from 'react-redux';
 const Section3 = () => {
   const [item, setItems] = useState([]);
   const customerWishList = useSelector(selectWishList);
+  const customerCart = useSelector(selectCart);
 
   useEffect(() => {
     setItems([
@@ -31,6 +32,7 @@ const Section3 = () => {
         <div className="section3-item-row">
           {item.map((item) => (
             <Section3Item
+              key={item.id}
               id={item.id}
               item={item}
               title={item.title}
@@ -41,6 +43,7 @@ const Section3 = () => {
               isNew={item.isNew}
               img={item.img}
               isInWishList={customerWishList.some(el => el === item.id)}
+              // inCart={customerCart.some(el => el === item.id)}
             />
           ))}
         </div>
