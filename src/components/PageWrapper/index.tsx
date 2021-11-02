@@ -1,17 +1,17 @@
 
 import { Layout, Menu } from 'antd';
 import { Link } from 'react-router-dom';
-import { CameraOutlined, CheckSquareOutlined, FormOutlined, UserOutlined } from '@ant-design/icons';
-import './style.scss'
+import { CameraOutlined, CheckSquareOutlined, FormOutlined, UserOutlined, PhoneOutlined, GithubOutlined } from '@ant-design/icons';
+import './index.scss'
 
 const { Header, Content, Footer } = Layout;
 
 
 const PageWrapper = (props:any) => {
   return (
-    <Layout className="layout">
+  <div className="page-wrapper layout">
     <Header>
-      <div className="logo" />
+      <div className="logo">Chapski Dev </div>
       <Menu  mode="horizontal" defaultSelectedKeys={['1']}>
         <Menu.Item className='menu-item' key="home" icon={<CheckSquareOutlined />}>
           <Link className='menu-link' to='/home'>Home Page</Link>
@@ -30,8 +30,17 @@ const PageWrapper = (props:any) => {
     <Content style={{ padding: '0 50px' }}>
       {props.children}
     </Content>
-    <Footer style={{ textAlign: 'center' }}>Ant Design ©2018 Created by Ant UED</Footer>
-  </Layout>
+    <Footer >
+      <div className="page-wrapper__footer-contacts">
+        <div className="page-wrapper__footer-contacts-title">CONTACT INFORMATION</div>
+        <a href="tel:+375291689232" target="_blank" className="page-wrapper__footer-contacts-phone"><PhoneOutlined />Mobile: +375(29)168-92-53</a>
+        <a href="https://github.com/chapski-dev" target="_blank" className="page-wrapper__footer-contacts-git"><GithubOutlined />GitHub</a>
+        <a href="https://t.me/chapski_a" target="_blank">Telegram</a>
+        <a href="http://instagram.com/chapski.a" target="_blank">Instagram</a>
+        <a href="#" className="page-wrapper__footer-contacts-mail">alexey.chapski@gmail.com</a>
+      </div>
+    </Footer>
+  </div>
   )
 }
 

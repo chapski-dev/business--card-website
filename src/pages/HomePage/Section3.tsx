@@ -1,5 +1,8 @@
 import './Section3.scss' 
 import cardOneImg from './img/section3/Funiro.png';
+import cardTwoImg from './img/section3/Figma-Land.png';
+import cardThreeImg from './img/section3/IT-Studio.png';
+
 import { Link } from 'react-router-dom';
 import { useHistory } from 'react-router-dom';
 
@@ -32,7 +35,7 @@ import { useHistory } from 'react-router-dom';
            <div className="section3-item">
             <div className="section3-item-card section3-item-card__figma-land">
                 <div className="front">
-                  <img src={cardOneImg} alt="" />
+                  <img src={cardTwoImg} alt="" />
                   <div className="front-info">Figma-land</div>
                 </div>
                 <div className="back">
@@ -49,7 +52,7 @@ import { useHistory } from 'react-router-dom';
            <div className="section3-item">
             <div className="section3-item-card section3-item-card__it-studio">
                 <div className="front">
-                  <img src={cardOneImg} alt="" />
+                  <img src={cardThreeImg} alt="" />
                   <div className="front-info">IT Studio</div>
                 </div>
                 <div className="back">

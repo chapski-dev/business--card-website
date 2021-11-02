@@ -8,22 +8,21 @@ import ItStudioPage from './pages/ItStudioPage/src/index';
 import ErrorPage from './pages/ErrorPage/index';
 import AddCardPage from './pages/AddCardPage/index';
 import { Provider } from 'react-redux';
-// import { store } from './redux/index';
-
+import store from './store';
 
 const Routes = () => {
   return (
-    <Switch>
-      <Redirect exact path='/' to='home' />
-      <Route exact path='/home' component={HomePage} />
-      <Route exact path='/funiro' component={FuniroPage} />
-      <Route exact path='/figma-land' component={FigmaLandPage} />
-      <Route exact path='/it-studio-page' component={ItStudioPage} />
-      <Route exact path='/card' component={AddCardPage} />
-
-      {/* <Route exact path='/users' component={FuniroPage} /> */}
-      <Route component={ErrorPage} />
-    </Switch>
+    <Provider store={store}>
+      <Switch>
+        <Redirect exact path='/' to='home' />
+        <Route exact path='/home' component={HomePage} />
+        <Route exact path='/funiro' component={FuniroPage} />
+        <Route exact path='/figma-land' component={FigmaLandPage} />
+        <Route exact path='/it-studio-page' component={ItStudioPage} />
+        <Route exact path='/card' component={AddCardPage} />
+        <Route component={ErrorPage} />
+      </Switch>
+    </Provider>
   )
 };
 

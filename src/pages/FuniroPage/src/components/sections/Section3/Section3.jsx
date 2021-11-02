@@ -2,23 +2,26 @@ import React from 'react';
 import { useEffect, useState } from "react";
 import "./Section3.scss";
 import { Section3Item } from './Section3Item';
+import { selectWishList } from '../../../../../../store/Customer';
+import { useSelector } from 'react-redux';
 
 
 
 
 const Section3 = () => {
-  const [item, setItems] = useState([])
+  const [item, setItems] = useState([]);
+  const customerWishList = useSelector(selectWishList);
 
   useEffect(() => {
     setItems([
-      { title: 'Syltherine', description: 'Stylish cafe chair', newPrice: 2500000, oldPrice: 3500000, sale: 30, isNew: false, img: '/Syltherine.png' },
-      { title: 'Leviosa', description: 'Stylish cafe chair', newPrice: 2500000, oldPrice: null, sale: null, isNew: false, img: '/Leviosa.png'  },
-      { title: 'Lolito', description: 'Luxury big sofa', newPrice: 7000000, oldPrice: 14000000, sale: 50, isNew: false, img: '/Lolito.png'  },
-      { title: 'Respira', description: 'Minimalist fan', newPrice: 500000, oldPrice: null, sale: null, isNew: true, img: '/Respira.png'  },
-      { title: 'Grifo', description: 'Night lamp', newPrice: 1500000, oldPrice: null, sale: null, isNew: false, img: '/Grifo.png'  },
-      { title: 'Muggo', description: 'Small mug', newPrice: 150000, oldPrice: null, sale: null, isNew: true, img: '/Muggo.png'  },
-      { title: 'Pingky', description: 'Cute bed set', newPrice: 7000000, oldPrice: 14000000, sale: 50, isNew: false, img: '/Pingky.png'  },
-      { title: 'Potty', description: 'Minimalist flower pot', newPrice: 500000, oldPrice: null, sale: null, isNew: true, img: '/Potty.png'  },
+      { id: 1, title: 'Syltherine', description: 'Stylish cafe chair', newPrice: 2500000, oldPrice: 3500000, sale: 30, isNew: false, img: '/Syltherine.png' },
+      { id: 2, title: 'Leviosa', description: 'Stylish cafe chair', newPrice: 2500000, oldPrice: null, sale: null, isNew: false, img: '/Leviosa.png'  },
+      { id: 3, title: 'Lolito', description: 'Luxury big sofa', newPrice: 7000000, oldPrice: 14000000, sale: 50, isNew: false, img: '/Lolito.png'  },
+      { id: 4, title: 'Respira', description: 'Minimalist fan', newPrice: 500000, oldPrice: null, sale: null, isNew: true, img: '/Respira.png'  },
+      { id: 5, title: 'Grifo', description: 'Night lamp', newPrice: 1500000, oldPrice: null, sale: null, isNew: false, img: '/Grifo.png'  },
+      { id: 6, title: 'Muggo', description: 'Small mug', newPrice: 150000, oldPrice: null, sale: null, isNew: true, img: '/Muggo.png'  },
+      { id: 7, title: 'Pingky', description: 'Cute bed set', newPrice: 7000000, oldPrice: 14000000, sale: 50, isNew: false, img: '/Pingky.png'  },
+      { id: 8, title: 'Potty', description: 'Minimalist flower pot', newPrice: 500000, oldPrice: null, sale: null, isNew: true, img: '/Potty.png'  },
     ]);
   }, []);
   return (
@@ -28,6 +31,7 @@ const Section3 = () => {
         <div className="section3-item-row">
           {item.map((item) => (
             <Section3Item
+              id={item.id}
               item={item}
               title={item.title}
               description={item.description}
@@ -36,6 +40,7 @@ const Section3 = () => {
               sale={item.sale}
               isNew={item.isNew}
               img={item.img}
+              isInWishList={customerWishList.some(el => el === item.id)}
             />
           ))}
         </div>

@@ -10,11 +10,15 @@ import Section6 from './components/sections/Section6/Section6';
 import PageWrapper from '../../../components/PageWrapper';
 
 
+
+
 const FuniroPage = () => {
   window.scrollTo({
     top:0,
     behavior: 'smooth',
   });
+
+  
   return (
     <PageWrapper>
       <div className="funiro-page">

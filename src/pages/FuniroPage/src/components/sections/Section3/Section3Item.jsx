@@ -1,7 +1,8 @@
 import "./Section3Item.scss";
 import { HeartOutlined, ShareAltOutlined } from '@ant-design/icons';
-// import {useDispatch} from 'react-redux';
+import { useDispatch, useSelector } from "react-redux";
 // import { setItemInCart } from "../../../../../../redux/card/reducer";
+import { addToWishList } from './../../../../../../store/Customer/actions';
 
 
 // Rp. {props.oldPrice}
@@ -30,27 +31,35 @@ function CreateProductLabel (labelType) {
   )
 }
 
-// const dispatch = useDispatch();
-// const handleClick = (e) => {
-//   e.stopPropagination();
-//   dispatch(setItemInCart(item));
-// }
-
-
 export const Section3Item = (props) => {
+  const dispatch = useDispatch();
+  
+  // const products = useSelector(state => state.basket.products)
+  
+  const addToBuscet = () => {
+    dispatch({type: "ADD_TO_BUSCET", payload:{}} )
+  }
+
+  const handleAddToWishList = (event) => {
+    event.preventDefault();
+
+    dispatch(addToWishList(props.id, props.title)) 
+    // TODO: сделать декомпозицию пропсов и в addToWishList добавить обьект который мы хотим передать с определенными значениями
+  }
+
   return (
     <div className="section3-item">
       {CreateProductLabel(props.sale || props.isNew)}
       <div className="section3-item-hiden">
-          <button className="section3-item-hiden__btn empty-btn" >Add to cart</button>
+          <button className="section3-item-hiden__btn empty-btn" onClick={() => addToBuscet}>Add to cart</button>
         <div className="section3-item-hiden__link-wrapper">
           <a href="#" className="section3-item-hiden__link share">
             <ShareAltOutlined />
             <span className="text">Share</span>
           </a>
-          <a href="#" className="section3-item-hiden__link like">
+          <a href="#" onClick={handleAddToWishList} className="section3-item-hiden__link like">
             <HeartOutlined />
-            <span className="text">Like</span>
+            <span className="text">{props.isInWishList ? "Dislike" : "Like"}</span>
           </a>
         </div>
       </div>
