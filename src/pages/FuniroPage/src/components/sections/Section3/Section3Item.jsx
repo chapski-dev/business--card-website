@@ -1,8 +1,8 @@
 import "./Section3Item.scss";
 import { HeartOutlined, ShareAltOutlined } from '@ant-design/icons';
 import { useDispatch, useSelector } from "react-redux";
-// import { setItemInCart } from "../../../../../../redux/card/reducer";
 import { addToWishList, addToCart } from './../../../../../../store/Customer/actions';
+import { selectCart, selectWishList } from "../../../../../../store/Customer";
 
 
 // Rp. {props.oldPrice}
@@ -32,15 +32,21 @@ function CreateProductLabel (labelType) {
 }
 
 export const Section3Item = (props) => {
+  const productsInCart = useSelector(selectCart);
+  const productsInWishList = useSelector(selectWishList);
+  
   const dispatch = useDispatch();
+
   const handleAddToCart = () => {
-    dispatch(addToCart(props.id))
+    dispatch(addToCart({id: props.id,title: props.title,newPrice: props.newPrice}))
+    console.log(productsInCart);
+
   }
 
   const handleAddToWishList = (event) => {
     event.preventDefault();
-    dispatch(addToWishList(props.id)) 
-    // TODO: сделать декомпозицию пропсов и в addToWishList добавить обьект который мы хотим передать с определенными значениями
+    dispatch(addToWishList({id: props.id,title: props.title,newPrice: props.newPrice})) 
+    console.log(productsInWishList);
   }
 
   return (

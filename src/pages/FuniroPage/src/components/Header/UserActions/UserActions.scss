@@ -19,7 +19,9 @@
   background-color: rgba(0, 0, 0, 0.1);
   border-radius: 100%;
 }
-
+.user-actions-item-wrapper {
+  margin-right: 30px;
+}
 .user-actions-item {
   :hover {
     transition: .2s linear;
@@ -42,4 +44,9 @@
   font-size: 12px;
   width: 15px;
   height: 15px;
+}
+
+
+.ant-dropdown {
+  min-width: 220px !important;
 }

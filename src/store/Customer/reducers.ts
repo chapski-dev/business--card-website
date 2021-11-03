@@ -6,8 +6,8 @@ import {
 } from './types';
 
 interface ICustomer {
-  wishList: number[];
-  cart: number[]
+  wishList: object[];
+  cart: object[]
 }
 // interface ICartType {
 // }
@@ -29,14 +29,14 @@ const customer = (state = defaultState, action: { type: string; payload: any; })
         wishList: [...state.wishList, action.payload]
       }
     case REMOVE_FROM_WISHLIST:
-      const newWishList = state.wishList.reduce((acc: number[], el) => {
-        return el === action.payload
-          ? acc
-          : [...acc, el];
-      }, [])
+      // const newWishList = state.wishList.reduce((acc: number[], el) => {
+        // return el === action.payload
+          // ? acc
+          // : [...acc, el];
+      // }, [])
       return {
         ...state, 
-        wishList: newWishList
+        // wishList: newWishList
       }
     case ADD_TO_CART:
       return {

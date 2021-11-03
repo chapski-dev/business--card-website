@@ -1,19 +1,19 @@
 import { ADD_TO_WISHLIST, REMOVE_FROM_WISHLIST, ADD_TO_CART, REMOVE_FROM_CART} from './types';
 
-export const addToWishList = (id: number) => ({
+export const addToWishList = (payload?: any) => ({
   type: ADD_TO_WISHLIST,
-  payload: id
+  payload
 })
 
-export const removeFromWishList = (id: number) => ({
+export const removeFromWishList = (payload?: any) => ({
   type: REMOVE_FROM_WISHLIST,
-  payload: id
+  payload
 })
-export const addToCart = (id: number) => ({
+export const addToCart = (payload?: any) => ({
   type: ADD_TO_CART,
-  payload: id
+  payload
 })
-export const removeFromCart = (id: number) => ({
+export const removeFromCart = (payload?: any) => ({
   type: REMOVE_FROM_CART,
-  payload: id
+  payload
 })
