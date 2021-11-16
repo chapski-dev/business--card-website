@@ -20,7 +20,7 @@ const UserActions = () => {
           {productsInWishList.map((product, index) => {
             return(
               <Menu.Item key={index}>
-                <a href="#">{`${product.title} ${product.newPrice}$`}</a> <button>Delete</button>
+                {`${product.title} ${product.newPrice}$`}<button>Delete</button>
               </Menu.Item>  
             )
           })}
