@@ -1,3 +1,4 @@
+import produce from 'immer';
 import {
   ADD_TO_WISHLIST,
   REMOVE_FROM_WISHLIST,
@@ -24,10 +25,15 @@ const defaultState: ICustomer = {
 const customer = (state = defaultState, action: { type: string; payload: any; }) => {
   switch (action.type) {
     case ADD_TO_WISHLIST:
-      return {
-        ...state, 
-        wishList: [...state.wishList, action.payload]
-      }
+      // классическая версия добавления элементов
+      // return {        
+      //   ...state, 
+      //   wishList: [...state.wishList, action.payload]
+      // }
+      // версия с добавлением иммутабельных обьектов с помощью immer
+      return produce(state, draft => {
+        draft.wishList.push(action.payload)
+      })
     case REMOVE_FROM_WISHLIST:
       // const newWishList = state.wishList.reduce((acc: number[], el) => {
         // return el === action.payload
@@ -39,10 +45,9 @@ const customer = (state = defaultState, action: { type: string; payload: any; })
         // wishList: newWishList
       }
     case ADD_TO_CART:
-      return {
-        ...state,
-        cart: [...state.cart, action.payload]
-      };
+      return produce(state, draft => {
+        draft.cart.push(action.payload)
+      })
 
     case REMOVE_FROM_CART:
       return {
