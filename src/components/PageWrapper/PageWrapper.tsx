@@ -1,12 +1,12 @@
 import { Layout, Menu, Dropdown } from 'antd';
 import { Link } from 'react-router-dom';
 import { CheckSquareOutlined, PhoneOutlined, GithubOutlined, DownOutlined } from '@ant-design/icons';
-import './index.scss'
+import './PageWrapper.scss'
 
 const { Header, Content, Footer } = Layout;
 
 
-const PageWrapper = (props:any) => {
+export const PageWrapper = (props:any) => {
   const menu = (
     <Menu>
       <Menu.Item key="0">
@@ -64,5 +64,3 @@ const PageWrapper = (props:any) => {
   </div>
   )
 }
-
-export default PageWrapper;

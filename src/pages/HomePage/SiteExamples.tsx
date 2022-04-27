@@ -4,8 +4,8 @@ import cardTwoImg from "./img/SiteExamples/Figma-Land.png";
 import cardThreeImg from "./img/SiteExamples/IT-Studio.png";
 import Aos from "aos";
 import { useEffect, useState } from "react";
-import BigTitle from "../../components/BigTitle/BigTitle";
 import { RollUpCards } from "../../components/RollUpCards";
+import { BigTitle } from "../../components/BigTitle";
 
 type SitesType = {
   title: string;

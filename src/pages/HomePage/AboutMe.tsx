@@ -1,4 +1,4 @@
-import BigTitle from "../../components/BigTitle/BigTitle";
+import { BigTitle } from "../../components/BigTitle";
 import AboutMeStyle from "./AboutMe.module.scss";
 import ProfileImg from "./img/ProfileImg.jpg";
 

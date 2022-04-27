@@ -3,7 +3,6 @@ import './src/essects/css/main.scss'
 import './src/essects/css/reset.css'
 import './src/essects/css/style.scss'
 import './src/essects/css/style-mob.css'
-import PageWrapper from '../../components/PageWrapper/PageWrapper'
 
 
 
@@ -14,7 +13,6 @@ const FigmaLandPage = () => {
     behavior: 'smooth',
   });
   return (
-    <PageWrapper>
       <div className="figma-land-page">
         <header className="header">
             <div className="container">
@@ -266,7 +264,6 @@ const FigmaLandPage = () => {
           new WOW().init();
         </script>
       </div>
-    </PageWrapper>
   )
 }
 

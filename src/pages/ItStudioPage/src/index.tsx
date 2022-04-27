@@ -1,4 +1,3 @@
-import PageWrapper from "../../../components/PageWrapper/PageWrapper"
 import './essects/css/style.scss'
 
 
@@ -8,7 +7,6 @@ const ItStudioPage = () => {
     behavior: 'smooth',
   });
   return (
-    <PageWrapper>
       <div className="it-studio-page">
         {/* <link rel="stylesheet" href="./essects/css/style.css">
         <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -228,7 +226,6 @@ const ItStudioPage = () => {
         </div>
       </footer>
       </div>
-    </PageWrapper>
   )
 }
 
