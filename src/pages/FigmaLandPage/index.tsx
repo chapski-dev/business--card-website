@@ -3,7 +3,7 @@ import './src/essects/css/main.scss'
 import './src/essects/css/reset.css'
 import './src/essects/css/style.scss'
 import './src/essects/css/style-mob.css'
-import PageWrapper from '../../components/PageWrapper'
+import PageWrapper from '../../components/PageWrapper/PageWrapper'
 
 
 

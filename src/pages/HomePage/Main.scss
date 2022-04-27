@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+
+.main {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  margin-bottom: 50px;
+  overflow: hidden;
+
+  .more-details {
+    position: absolute;
+    bottom: 150px;
+    right: 200px;
+    left: auto;
+    padding: 10px;
+    border: 3px solid orange;
+    color: orange;
+    background: white;
+    font-size: 24px;
+    text-transform: uppercase;
+    font-weight: 700;
+    transition: 0.45s;
+
+    &:hover {
+      color: white;
+      background: orange;
+    }
+  }
+  .typed-text {
+    font-size: 3rem;
+    padding: 0.5rem;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+    text-align: center;
+    overflow: hidden;
+  }
+
+  .main__bg-image {
+    height: inherit;
+    object-fit: cover;
+    width: 100%;
+  }
+  
+  .main-title-wrapper {
+    position: absolute;
+    left: 0px;
+    text-align: left;
+    bottom: 150px;
+    z-index: 2;
+    width: 560px;
+  }
+
+  .main-title {
+    color: white;
+    font-size: 40px;
+  }
+
+  .main-suptitle-wrpaper {
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+    text-align: center;
+    overflow: hidden;
+
+    .typed-text {
+      font-weight: normal;
+      color: #dd7732;
+    }
+  }
+}

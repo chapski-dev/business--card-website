@@ -1,16 +1,23 @@
-import PageWrapper from "../../components/PageWrapper";
-import Section1 from './Section1';
-import Section2 from "./Section2";
-import Section3 from "./Section3";
+import PageWrapper from "../../components/PageWrapper/PageWrapper";
+import Main from './Main';
+import SkillsDescription from './SkillsDescription';
+import SiteExamples from './SiteExamples';
+import AboutMe from "./AboutMe";
+
 
 
 const HomePage = () => {
+  window.scrollTo({
+    top:0,
+    behavior: 'smooth',
+  });
   return (
     <PageWrapper>
     <div className="home-page">
-      <Section1 />
-      <Section2 />
-      <Section3 />
+      <Main />
+      <SkillsDescription />
+      <SiteExamples />
+      <AboutMe />
     </div>
     </PageWrapper>
   )

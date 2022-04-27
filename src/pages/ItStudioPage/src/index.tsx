@@ -1,4 +1,4 @@
-import PageWrapper from "../../../components/PageWrapper"
+import PageWrapper from "../../../components/PageWrapper/PageWrapper"
 import './essects/css/style.scss'
 
 
