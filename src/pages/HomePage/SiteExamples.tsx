@@ -1,11 +1,11 @@
-import "./SiteExamples.scss";
-import cardOneImg from "./img/SiteExamples/Funiro.png";
-import cardTwoImg from "./img/SiteExamples/Figma-Land.png";
-import cardThreeImg from "./img/SiteExamples/IT-Studio.png";
-import Aos from "aos";
-import { useEffect, useState } from "react";
-import { RollUpCards } from "../../components/RollUpCards";
-import { BigTitle } from "../../components/BigTitle";
+import './SiteExamples.scss';
+import Aos from 'aos';
+import { useEffect, useState } from 'react';
+import cardOneImg from './img/SiteExamples/Funiro.png';
+import cardTwoImg from './img/SiteExamples/Figma-Land.png';
+import cardThreeImg from './img/SiteExamples/IT-Studio.png';
+import { RollUpCards } from '../../components/RollUpCards';
+import { BigTitle } from '../../components/BigTitle';
 
 type SitesType = {
   title: string;
@@ -19,22 +19,22 @@ const SiteExamples = () => {
   useEffect(() => {
     setSites([
       {
-        title: "Funiro",
-        text: "Internet Shop where you can add some products in cart",
+        title: 'Funiro',
+        text: 'Internet Shop where you can add some products in cart',
         image: cardOneImg,
-        url: "funiro",
+        url: 'funiro',
       },
       {
-        title: "Figma Land",
-        text: "Internet Shop where you can add some products in cart",
+        title: 'Figma Land',
+        text: 'Internet Shop where you can add some products in cart',
         image: cardTwoImg,
-        url: "figma-land",
+        url: 'figma-land',
       },
       {
-        title: "IT Studio",
-        text: "Internet Shop where you can add some products in cart",
+        title: 'IT Studio',
+        text: 'Internet Shop where you can add some products in cart',
         image: cardThreeImg,
-        url: "it-studio-page",
+        url: 'it-studio-page',
       },
     ]);
     Aos.init({ duration: 800 });

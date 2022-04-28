@@ -1,13 +1,13 @@
-import Main from "./Main";
-import SkillsDescription from "./SkillsDescription";
-import SiteExamples from "./SiteExamples";
-import AboutMe from "./AboutMe";
-import { PageWrapper } from "../../components/PageWrapper";
+import Main from './Main';
+import SkillsDescription from './SkillsDescription';
+import SiteExamples from './SiteExamples';
+import AboutMe from './AboutMe';
+import { PageWrapper } from '../../components/PageWrapper';
 
 const HomePage = () => {
   window.scrollTo({
     top: 0,
-    behavior: "smooth",
+    behavior: 'smooth',
   });
   return (
     <PageWrapper>

@@ -1,19 +1,20 @@
 import { createStore, combineReducers } from 'redux';
 
-import { CustomerReducers } from './Customer';
+// eslint-disable-next-line import/no-extraneous-dependencies
 import { composeWithDevTools } from 'redux-devtools-extension';
+import { CustomerReducers } from './Customer';
 
 const composeEnhancers = composeWithDevTools({
   // Specify here name, actionsBlacklist, actionsCreators and other options
 });
 
 export const reducers = {
-	CustomerReducers,
+  CustomerReducers,
 };
 
 const store = createStore(
-	combineReducers(reducers),
-  composeEnhancers()
+  combineReducers(reducers),
+  composeEnhancers(),
 );
 
 export default store;

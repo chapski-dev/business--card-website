@@ -1,13 +1,13 @@
-import { motion } from "framer-motion";
-import "./Main.scss";
-import mainPage from "../HomePage/img/Main/bg-notebook.jpeg";
-import Typewriter from "typewriter-effect";
-import { useCallback } from "react";
+import { motion } from 'framer-motion';
+import './Main.scss';
+import Typewriter from 'typewriter-effect';
+import { useCallback } from 'react';
+import mainPage from './img/Main/bg-notebook.jpeg';
 
 const Main = () => {
   const handleOnClick = useCallback((e: any) => {
     e.preventDefault();
-    const target = e.target.getAttribute("href");
+    const target = e.target.getAttribute('href');
     const location = document.querySelector(target).offsetTop;
 
     window.scrollTo({
@@ -38,7 +38,7 @@ const Main = () => {
             <p className="typed-text">
               <Typewriter
                 options={{
-                  strings: ["realy cool!", "awsome!"],
+                  strings: ['realy cool!', 'awsome!'],
                   delay: 150,
                   autoStart: true,
                   loop: true,

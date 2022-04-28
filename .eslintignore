@@ -1,0 +1,9 @@
+*.css
+*.svg
+*.scss
+*.json
+*.md
+
+
+*.jsx
+# *.ts

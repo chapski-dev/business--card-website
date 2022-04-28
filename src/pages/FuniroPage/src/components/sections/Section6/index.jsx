@@ -1,1 +1,1 @@
-export {default} from './Section6';
+export { Section6 } from './Section6';
