@@ -1,32 +1,39 @@
-import './SkillsDescription.scss';
+import { Container } from 'components/Container';
+import SkillsDescriptionStyle from './SkillsDescription.module.scss';
+
+const infoCards = [
+  {
+    title: 'Basic',
+    suptitle: ' Layout',
+    text: 'Адаптивность и кроссбраузерность. По готовым или индивидуальным решениям.',
+  },
+  {
+    title: 'SIGNATURE',
+    suptitle: ' WordPress & Tilda',
+    text: 'Пересадка сайта на WP и Tilda.',
+  },
+  {
+    title: 'ULTIMATE',
+    suptitle: 'React',
+    text: 'Разработка React приложений и сайтов.',
+  },
+];
 
 const SkillsDescription = () => (
-  <section className="skillsDescription">
-    <div className="container">
-      <div className="skillsDescription-items-row">
-        <div className="skillsDescription-item">
-          <div className="skillsDescription-item-info">
-            <h3 className="skillsDescription-item-info__title">Basic</h3>
-            <span className="skillsDescription-item-info__suptitle">Layout</span>
-            <span className="skillsDescription-item-info__text">Адаптивность и кроссбраузерность. По готовым или индивидуальным решениям.</span>
+  <section className={SkillsDescriptionStyle.skillsDescription}>
+    <Container>
+      <div className={SkillsDescriptionStyle.itemsRow}>
+        {infoCards.map((item) => (
+          <div className={SkillsDescriptionStyle.item}>
+            <div className={SkillsDescriptionStyle.itemInfo}>
+              <h3 className={SkillsDescriptionStyle.itemInfo__title}>{item.title}</h3>
+              <span className={SkillsDescriptionStyle.itemInfo__suptitle}>{item.suptitle}</span>
+              <span className={SkillsDescriptionStyle.itemInfo__text}>{item.text}</span>
+            </div>
           </div>
-        </div>
-        <div className="skillsDescription-item">
-          <div className="skillsDescription-item-info">
-            <h3 className="skillsDescription-item-info__title">SIGNATURE</h3>
-            <span className="skillsDescription-item-info__suptitle">WordPress & Tilda</span>
-            <span className="skillsDescription-item-info__text">Пересадка сайта на WP и Tilda.</span>
-          </div>
-        </div>
-        <div className="skillsDescription-item">
-          <div className="skillsDescription-item-info">
-            <h3 className="skillsDescription-item-info__title">ULTIMATE</h3>
-            <span className="skillsDescription-item-info__suptitle">React</span>
-            <span className="skillsDescription-item-info__text">Разработка React приложений и сайтов.</span>
-          </div>
-        </div>
+        ))}
       </div>
-    </div>
+    </Container>
   </section>
 );
 

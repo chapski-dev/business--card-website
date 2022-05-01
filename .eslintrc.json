@@ -21,6 +21,9 @@
     "react-hooks"
   ],
   "rules": {
+    "max-len": "off",
+    "no-trailing-spaces": ["warn", { "skipBlankLines": false }],
+    "react/prop-types": 0,
     "react/require-default-props": "off",
     "react/function-component-definition": [
       "off",

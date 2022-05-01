@@ -1,0 +1,98 @@
+.overlay {
+  position: absolute;
+  left: 0;
+  top: 30%;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  z-index: 0;
+}
+.gridWrapper {
+  position: relative;
+}
+.grid {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: calc(100vh - 250px);
+  overflow: hidden;
+  perspective: 50vh;
+}
+.gridIbf {
+  z-index: 2;
+}
+.gridFade {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+  background: radial-gradient(
+    ellipse at 50% 50%,
+    rgba(1, 0, 2, 0) 0%,
+    #010002 80%
+  );
+}
+.gridLines {
+  width: 100%;
+  height: 200%;
+  background-image: linear-gradient(
+      to right,
+      rgba(14, 171, 249, 0.85) 1px,
+      transparent 0
+    ),
+    linear-gradient(to bottom, rgba(14, 171, 249, 0.85) 1px, transparent 0);
+  background-size: 45px 30px;
+  background-repeat: repeat;
+  transform-origin: 100% 0 0;
+  animation: s-grid-animation 15s linear infinite;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+@media print {
+  *,
+  *::before,
+  *::after {
+    text-shadow: none !important;
+    box-shadow: none !important;
+  }
+}
+
+:focus {
+  outline: 0;
+}
+
+@keyframes s-grid-animation {
+  0% {
+    -webkit-transform: rotateX(45deg) translateY(-50%);
+    -moz-transform: rotateX(45deg) translateY(-50%);
+    -ms-transform: rotateX(45deg) translateY(-50%);
+    -o-transform: rotateX(45deg) translateY(-50%);
+    transform: rotateX(45deg) translateY(-50%);
+  }
+  100% {
+    -webkit-transform: rotateX(45deg) translateY(0);
+    -moz-transform: rotateX(45deg) translateY(0);
+    -ms-transform: rotateX(45deg) translateY(0);
+    -o-transform: rotateX(45deg) translateY(0);
+    transform: rotateX(45deg) translateY(0);
+  }
+}
+@-webkit-keyframes s-grid-animation {
+  0% {
+    -webkit-transform: rotateX(45deg) translateY(-50%);
+    -moz-transform: rotateX(45deg) translateY(-50%);
+    -ms-transform: rotateX(45deg) translateY(-50%);
+    -o-transform: rotateX(45deg) translateY(-50%);
+    transform: rotateX(45deg) translateY(-50%);
+  }
+  100% {
+    -webkit-transform: rotateX(45deg) translateY(0);
+    -moz-transform: rotateX(45deg) translateY(0);
+    -ms-transform: rotateX(45deg) translateY(0);
+    -o-transform: rotateX(45deg) translateY(0);
+    transform: rotateX(45deg) translateY(0);
+  }
+}

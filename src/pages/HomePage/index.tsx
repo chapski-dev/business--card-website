@@ -1,4 +1,4 @@
-import Main from './Main';
+import Hero from './Hero';
 import SkillsDescription from './SkillsDescription';
 import SiteExamples from './SiteExamples';
 import AboutMe from './AboutMe';
@@ -12,7 +12,7 @@ const HomePage = () => {
   return (
     <PageWrapper>
       <div className="home-page">
-        <Main />
+        <Hero />
         <SkillsDescription />
         <SiteExamples />
         <AboutMe />
