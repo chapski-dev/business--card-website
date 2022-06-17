@@ -1,6 +1,7 @@
-@import "./assets/scss/style.scss";
-@import "./assets/scss/style.scss";
 @import "aos/dist/aos.css";
+@import "./assets/scss/style.scss";
+@import './styles/utils/mixins/media';
+@import './views/Home/Home.scss';
 
 body {
   margin: 0;

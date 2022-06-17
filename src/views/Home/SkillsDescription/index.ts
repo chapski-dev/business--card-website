@@ -1,0 +1,1 @@
+export { SkillsDescription } from './SkillsDescription';

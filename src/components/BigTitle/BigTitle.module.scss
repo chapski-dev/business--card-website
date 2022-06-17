@@ -1,36 +1,23 @@
 .titleWrapper {
   width: 100%;
   text-align: center;
-  padding: 20px 0;
-  background-color: #ae338b;
-  border-radius: 20px;
-  margin-bottom: 50px;
-  box-shadow: -2px -2px 6px #ffffff1a, 2px 2px 6px #ffffffcc;
+  padding-top: 20px;
+  margin-bottom: 80px;
 }
 
 .title {
-  display: inline-block;
+  color: white;
+  font-size: 3.5rem;
+  font-weight: 600;
+  line-height: 1.5;
   position: relative;
-  color: black;
+}
 
-  &::before,
-  &::after {
-    content: "";
-    display: inline-block;
-    width: 40px;
-    height: 2px;
-    background-color: black;
-
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-
-  &::before {
-    left: -45px;
-  }
-
-  &::after {
-    right: -45px;
-  }
+.suptitle {
+  font-size: 1.625rem !important;
+  color: #7a7980 !important;
+  margin-bottom: 0.5rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  line-height: 1.5;
 }

@@ -1,3 +1,5 @@
+@import "assets/scss/utils/variables";
+
 .header {
   height: 75px;
   width: 100%;
@@ -9,4 +11,22 @@
   top: 0;
   left: 0;
   z-index: 10;
+}
+
+.logo {
+  font-weight: 900;
+  font-size: 2rem;
+  line-height: normal;
+  overflow: hidden;
+  background: linear-gradient(
+    to right,
+    $orange-dark,
+    midnightblue 50%,
+    black 50%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200%;
+  transition: background-position 300ms ease-out;
 }

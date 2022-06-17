@@ -1,0 +1,17 @@
+.portfolio {
+  margin-bottom: 150px;
+  position: relative;
+}
+
+.itemsRow {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.elipsis {
+  position: absolute;
+  top: 0;
+  left: 0;
+}

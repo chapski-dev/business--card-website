@@ -1,0 +1,17 @@
+.container {
+  width: 1247px;
+  max-width: 100%;
+  padding: 0 18px;
+  margin: 0 auto;
+  height: 100%;
+  // @include tablet-land {
+  //   width: 1024px;
+  //   padding: 0 3% !important;
+  // }
+  // @include tablet {
+  //   margin: 0 auto;
+  //   padding: 0 10px;
+  //   width: 100%;
+  //   box-sizing: border-box;
+  // }
+}

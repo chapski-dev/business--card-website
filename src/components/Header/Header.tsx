@@ -5,7 +5,7 @@ import HeaderStyle from './Header.module.scss';
 
 export const Header = memo(() => (
   <header className={HeaderStyle.header}>
-    <Link to="/">Chapski Dev</Link>
+    <Link className={HeaderStyle.logo} to="/">Chapski Dev</Link>
     <Nav />
   </header>
 ));

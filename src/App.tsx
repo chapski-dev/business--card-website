@@ -1,10 +1,10 @@
 import { Routes, Route } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import FuniroPage from 'pages/FuniroPage/src/index';
-import HomePage from 'pages/HomePage/index';
 import FigmaLandPage from 'pages/FigmaLandPage/index';
 import ItStudioPage from 'pages/ItStudioPage/src/index';
 import { ErrorPage } from 'pages/ErrorPage';
+import { HomePage } from 'pages/HomePage';
 import store from './store';
 
 function App() {

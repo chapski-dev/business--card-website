@@ -1,0 +1,106 @@
+/*===== GOOGLE FONTS =====*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+/*===== VARIABLES CSS =====*/
+:root {
+  /*===== Colores =====*/
+  --first-color: #ae338b;
+  --white-color: #E9EAEC;
+  --dark-color: #272D40;
+  --dark-color-lighten: #F2F5FF;
+  /*===== Fuente y tipografia =====*/
+  --body-font: 'Poppins', sans-serif;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --normal-font-size: 1rem;
+  --small-font-size: .875rem;
+}
+/* Hover card effect */
+img {
+	max-width: 100%;
+	height: auto;
+}
+.card {
+	width: 320px;
+	height: 400px;
+	background-color: var(--dark-color);
+	border-radius: 1rem;
+	padding: 4rem 2rem 0;
+	color: var(--white-color);
+	// overflow-y: hidden;
+	&:hover {
+		.card__img {
+			transform: translate(-1.5rem, -9.5rem) rotate(-20deg);
+		}
+		.card__data {
+			transform: translateY(4.8rem);
+      height: auto;
+      overflow: visible;
+		}
+		.card__title {
+			transform: translateX(-2.3rem);
+			margin-bottom: 0;
+		}
+		.card__price {
+			transform: translateX(-6.8rem);
+		}
+		.card__description {
+			transition-delay: .2s;
+			opacity: 1;
+		}
+		.card__button {
+			transition-delay: .2s;
+			opacity: 1;
+		}
+	}
+}
+.card__img {
+	position: absolute;
+	width: 260px;
+	filter: drop-shadow(5px 10px 15px rgba(8,9,13,.4));
+	transition: .5s;
+}
+
+.card__data {
+	transform: translateY(13.2rem);
+	text-align: center;
+	transition: .5s;
+  height: 100px;
+  overflow: hidden;
+}
+
+.card__title {
+	font-size: var(--h1-font-size);
+	color: var(--first-color);
+	margin-bottom: .5rem;
+	transition: .5s;
+}
+
+.card__price {
+	display: inline-block;
+	font-size: var(--h2-font-size);
+	font-weight: 500;
+	margin-bottom: 1.25rem;
+	transition: .5s;
+}
+
+.card__description {
+	font-size: var(--small-font-size);
+	text-align: initial;
+	margin-bottom: 1.25rem;
+	opacity: 0;
+	transition: .5s;
+}
+.card__button {
+	display: block;
+	width: max-content;
+	padding: 1.125rem 2rem;
+	background-color: var(--first-color);
+	color: var(--white-color);
+	border-radius: .5rem;
+	font-weight: 600;
+	transition: .2s;
+	opacity: 0;
+	&:hover {
+		box-shadow: 0 18px 40px -12px #ae338b;
+	}
+}

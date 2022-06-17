@@ -3,6 +3,21 @@
   align-items: center;
 }
 
+.navLink {
+  font-weight: 500;
+
+  &.active {
+    // text-decoration: underline;
+    a {
+      color: #e83e8c;
+    }
+  }
+}
+.active {
+  // text-decoration: underline;
+    color: #e83e8c;
+}
+
 .navItem {
   position: relative;
   margin-right: 50px;

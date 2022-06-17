@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { DownOutlined } from '@ant-design/icons';
 import NavStyle from './Nav.module.scss';
 
@@ -6,7 +6,7 @@ export const Nav = () => (
   <nav className={NavStyle.nav}>
     <ul className={NavStyle.navList}>
       <li className={NavStyle.navItem}>
-        <Link className={NavStyle.navLink} to="/">Home</Link>
+        <NavLink className={(isActive) => `${NavStyle.navLink} ${!isActive ? '' : NavStyle.active}`} to="/">Home</NavLink>
       </li>
       <li className={NavStyle.navItem}>
         My Works
